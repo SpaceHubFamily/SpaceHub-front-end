@@ -1,8 +1,8 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
-const TestComponent = () => (
+const LandingPage = () => (
   <RaisedButton label="Default" />
 );
 
-export default TestComponent;
+export default LandingPage;

@@ -7,7 +7,10 @@
     "start": "webpack-dev-server --open"
   },
   "babel": {
-    "presets": ["env", "react"]
+    "presets": [
+      "env",
+      "react"
+    ]
   },
   "repository": "git+https://github.com/SpaceHubFamily/SpaceHub-front-end.git",
   "author": "Tom, Nick, Daria, Jeff",
@@ -17,10 +20,11 @@
   },
   "homepage": "https://github.com/SpaceHubFamily/SpaceHub-front-end#readme",
   "dependencies": {
+    "material-ui": "^0.18.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
-  "devDependencies" : {
+  "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",

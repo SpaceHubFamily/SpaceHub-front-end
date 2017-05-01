@@ -1,8 +1,8 @@
 import App from './components/App.js';
-import LandingPage from './containers/LandingPage.js';
-import SetUpPage from './containers/SetUpPage.js';
-import CompanyPage from './containers/CompanyPage.js';
-import UserPage from './containers/UserPage.js';
+import LandingPage from './components/LandingPage.js';
+import SetUpPage from './components/SetUpPage.js';
+import CompanyPage from './components/CompanyPage.js';
+import UserPage from './components/UserPage.js';
 
 const routes = {
   // App component (wrapper for the whole application).

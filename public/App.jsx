@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import TestComponent from './TestComponent.js';
+injectTapEventPlugin();
 
+const App = () => (
+  <MuiThemeProvider>
+    <TestComponent />
+  </MuiThemeProvider>
+);
 
-// ReactDOM.render(<someComponentHere />,
-// document.getElementById('app'))
+export default App;

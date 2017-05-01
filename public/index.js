@@ -1,11 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './components/App.js'
-import routes from './routes.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, HashRouter } from 'react-router-dom'
+import App from './components/App.js';
 
-require('./styles/main.css');
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
+ReactDOM.render((
+  <HashRouter>
+    <App/>
+  </HashRouter>
+
+     ),
+     document.getElementById('app')
 );

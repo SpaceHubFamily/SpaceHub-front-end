@@ -6,7 +6,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import LandingPage from './LandingPage';
 import CompanyPage from './CompanyPage';
 import UserPage from './UserPage';
-import SetUpPage from './SetUpPage';
+import SetUpPage from './containers/SetUpPage';
 
 import { Switch, Route } from 'react-router'
 

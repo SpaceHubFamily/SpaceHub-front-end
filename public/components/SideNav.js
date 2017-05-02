@@ -7,21 +7,31 @@ export default class DrawerSimpleExample extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {open: false};
+    this.state = {open: open};
   }
 
-  handleToggle = () => this.setState({open: !this.state.open});
+  handleToggle() {
+     this.setState({open: !this.state.open});
+  }
 
   render() {
     return (
       <div>
         <RaisedButton
           label="Toggle Drawer"
-          onTouchTap={this.handleToggle}
+          onTouchTap={this.handleToggle.bind(this)}
         />
         <Drawer open={this.state.open}>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
+          <div>
+            <p>Company profile</p>
+          </div>
+          <div>
+            <MenuItem>My dashboard</MenuItem>
+            <MenuItem>Create New Room</MenuItem>
+            <MenuItem>Schedule</MenuItem>
+            <MenuItem>My venues/rooms</MenuItem>
+         </div>
+
         </Drawer>
       </div>
     );

@@ -2,6 +2,7 @@ import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
+import Avatar from 'material-ui/Avatar';
 
 export default class DrawerSimpleExample extends React.Component {
 
@@ -16,24 +17,20 @@ export default class DrawerSimpleExample extends React.Component {
 
   render() {
     return (
-      <div>
-        <RaisedButton
-          label="Toggle Drawer"
-          onTouchTap={this.handleToggle.bind(this)}
-        />
-        <Drawer open={this.state.open}>
-          <div>
-            <p>Company profile</p>
+      <Drawer>
+        <div className="sidenav">
+          <div className="myInfo">
+            <Avatar src="https://unsplash.it/70/70" size={50} />
+            <p>My profile</p>
           </div>
-          <div>
+          <div className="menu">
             <MenuItem>My dashboard</MenuItem>
             <MenuItem>Create New Room</MenuItem>
             <MenuItem>Schedule</MenuItem>
             <MenuItem>My venues/rooms</MenuItem>
          </div>
-
-        </Drawer>
       </div>
+    </Drawer>
     );
   }
 }

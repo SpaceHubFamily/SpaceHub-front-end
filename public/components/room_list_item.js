@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 
-class RoomListItem extends Component {
-  render() {
-    return 
-  }
+const RoomListItem = (props) => {
+  return (
+    <li>
+      <p>{props.room.name}</p>
+      <p>{props.room.capacity}</p>
+      <p>{props.room.hour_rate}</p>
+      <p>{props.room.img_url}</p>
+    </li>
+  )
 }
 
 export default RoomListItem

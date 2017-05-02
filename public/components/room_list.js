@@ -4,10 +4,17 @@ import RoomListItem from './room_list_item.js'
 
 const RoomList = (props) => {
   const rooms = props.rooms
+  const roomList = rooms.map(room => {
+    return <RoomListItem key={room.name} room={room} />
+  })
+
   return (
-    <ul>
-      {rooms.length}
-    </ul>
+    <div className="roomList">
+      <h1>My rooms</h1>
+      <ul>
+        {roomList}
+      </ul>
+    </div>
   )
 }
 

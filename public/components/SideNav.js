@@ -16,7 +16,7 @@ export default class DrawerSimpleExample extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="sidenav">
         <RaisedButton
           label="Toggle Drawer"
           onTouchTap={this.handleToggle.bind(this)}

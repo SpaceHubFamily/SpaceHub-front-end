@@ -22,11 +22,11 @@ const styles = {
  */
 const Header = () => (
   <AppBar
-    title={<span style={styles.title}>Title</span>}
+    title={<span className="nav-title">SpaceHub</span>}
+    // title={<span style={styles.title}>SpaceHub</span>}
     onTitleTouchTap={handleTouchTap}
-    // iconElementLeft={<IconButton><NavigationClose /></IconButton>}
-    // iconElementRight={<div><FlatButton label="Log In" /><FlatButton label="SignUp" /></div>}
-    iconElementRight={<div class="nav-btns"><FlatButton label="Log In" /><FlatButton label="SignUp" /></div>}
+    showMenuIconButton={false}
+    iconElementRight={<div className="nav-btns"><FlatButton label="Log In" /><FlatButton label="SignUp" /></div>}
   />
 );
 

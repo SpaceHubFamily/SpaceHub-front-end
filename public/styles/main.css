@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Cormorant+SC|Orbitron');
+/*
+font-family: 'Cormorant SC', serif;
+font-family: 'Orbitron', sans-serif;
+*/
+
 .lightBlue {
   color: rgba(17, 189, 255, 1);
 }
@@ -20,4 +26,44 @@
 
 .purple {
   color: rgba(91, 72, 175, 1);
+}
+
+body {
+  margin: 0;
+}
+
+.nav-btns {
+  margin-top: 4px;
+  color: #fff;
+  margin-right: 16px;
+  padding-left: 20px;
+  border-left: 1px solid rgb(134,134,134);
+  border-left: 1px solid rgba(0,0,0,.3);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+.nav-btns span {
+  color: #141414;
+  font-family: 'Cormorant SC', serif;
+  font-size: 16px !important;
+}
+
+.nav-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px !important;
+}
+
+/* Video */
+
+#background-video {
+
+  height: 100%;
+  width: 100%;
+  float: left;
+  top: 0;
+  padding: none;
+  /*position: fixed; */
+
+
 }

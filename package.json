@@ -4,6 +4,7 @@
   "description": "q3 team project",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "start": "webpack-dev-server --open"
   },
   "babel": {

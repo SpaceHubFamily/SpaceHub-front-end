@@ -4,6 +4,7 @@
   "description": "q3 team project",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "start": "webpack-dev-server --open"
   },
   "babel": {
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/SpaceHubFamily/SpaceHub-front-end#readme",
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
+    "firebase": "^3.9.0",
     "material-ui": "^0.18.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",

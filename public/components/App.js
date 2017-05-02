@@ -36,8 +36,8 @@ const muiTheme = getMuiTheme({
   },
   appBar: {
     height: 70,
-    color: lightBlue900,
-    textColor: white,
+    color: white,
+    textColor: darkBlack,
   },
   avatar: {
     borderColor: white,

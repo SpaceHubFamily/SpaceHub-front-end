@@ -5,8 +5,14 @@ import RoomList from './room_list.js'
 import RoomListItem from './room_list_item.js'
 
 const CompanyDashboard = () => (
-  <RoomList />
-  <RoomListItem />
+  render() {
+    return
+    <div>
+      <RoomList />
+      <RoomListItem />
+    </div>
+  }
+
 );
 
-export default ComapnyDashboard;
+export default CompanyDashboard;

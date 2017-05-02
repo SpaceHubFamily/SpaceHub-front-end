@@ -1,8 +1,10 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+// import RaisedButton from 'material-ui/RaisedButton';
+import Header from './Header'
+
 
 const LandingPage = () => (
-  <RaisedButton label="Default" />
+  <Header />
 );
 
 export default LandingPage;

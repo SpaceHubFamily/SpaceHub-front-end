@@ -3,8 +3,8 @@ import axios from 'axios'
 const roomApis = {
 
   getRooms: function() {
-    return axios.get('https://spacehubapi.herokuapp.com/')
-      .then(response => console.log(response.data))
+    return axios.get('https://spacehubapi.herokuapp.com/room')
+      .then(response => response.data)
   }
 
 }

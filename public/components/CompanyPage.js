@@ -4,6 +4,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import SideNav from './SideNav'
+import RoomList from './room_list'
 import roomApis from '../utils/api'
 
 class CompanyPage extends Component {
@@ -16,15 +17,19 @@ class CompanyPage extends Component {
   }
 
   componentDidMount() {
-    roomApis.getRooms()
-    .then(result => console.log(result))
+    roomApis.getRooms('https://spacehubapi.herokuapp.com/rooms')
+    .then(rooms =>
+      this.setState({ rooms })
+    )
   }
 
   render() {
     return (
       <MuiThemeProvider>
         <div>
-        <SideNav />
+          
+          <RoomList rooms = {this.state.rooms} />
+
         </div>
       </MuiThemeProvider>
     )

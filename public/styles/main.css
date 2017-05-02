@@ -23,5 +23,9 @@
 }
 
 .roomList {
-  float: right;
+  margin: 0 35px 0 270px;
+}
+
+.myInfo {
+  margin: 20px 20px 200px 20px;
 }

@@ -13,7 +13,7 @@ class CompanyDashboard extends Component {
     }
   }
   componentDidMount() {
-    roomApis.getRooms('https://spacehubapi.herokuapp.com/rooms')
+    roomApis.getOpenRooms()
     .then(rooms =>
       this.setState({ rooms })
     )

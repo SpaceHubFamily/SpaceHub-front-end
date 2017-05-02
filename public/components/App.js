@@ -41,7 +41,7 @@ const muiTheme = getMuiTheme({
   },
   avatar: {
     borderColor: white,
-  },
+  }
 });
 
 

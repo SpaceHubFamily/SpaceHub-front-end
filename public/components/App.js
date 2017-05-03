@@ -32,7 +32,7 @@ import spacing from 'material-ui/styles/spacing';
 
 const muiTheme = getMuiTheme({
   palette: {
-    textColor: cyan500,
+    textColor: indigo300,
   },
   appBar: {
     height: 70,
@@ -41,7 +41,7 @@ const muiTheme = getMuiTheme({
   },
   avatar: {
     borderColor: white,
-  },
+  }
 });
 
 

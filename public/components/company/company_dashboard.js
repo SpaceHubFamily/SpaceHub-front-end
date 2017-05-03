@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import roomApis from '../utils/api'
+import roomApis from '../../utils/api'
 import RoomList from './room_list.js'
 import RoomListItem from './room_list_item.js'
 
@@ -9,19 +9,28 @@ class CompanyDashboard extends Component {
     super(props)
 
     this.state = {
-      rooms: []
+      openRooms: [],
+      pendingRooms: []
     }
   }
   componentDidMount() {
     roomApis.getOpenRooms()
-    .then(rooms =>
-      this.setState({ rooms })
+    .then(openRooms =>
+      this.setState({ openRooms })
     )
   }
+
+  componentDidMount() {
+    roomApis.getPendingRooms()
+    .then(pendingRooms =>
+      this.setState({ pendingRooms })
+    )
+  }
+
   render() {
     return (
       <div>
-        <RoomList rooms = {this.state.rooms} />
+        <RoomList openRooms = {this.state.openRooms} pendingRooms = {this.state.pendingRooms}/>
       </div>
     )
   }

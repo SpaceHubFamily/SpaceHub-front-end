@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
-const RoomListItem = ({ room }) => {
+const RoomListItem = ({ openRoom }) => {
   return (
     <Card>
         <CardText>
-          <h3>Status: </h3>
-          <p>Room: {room.room_name}</p>
-          <p>Rate: {room.day_rate}</p>
+          <h3>Status: available</h3>
+          <p>Room: {openRoom.room_name}</p>
+          <p>Rate: {openRoom.day_rate}</p>
         </CardText>
         <CardHeader
             title="User"

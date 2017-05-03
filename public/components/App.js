@@ -5,9 +5,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { Switch, Route } from 'react-router';
 import {Provider} from 'react-redux';
-import LandingPage from './LandingPage';
-import CompanyPage from './CompanyPage';
-import UserPage from './UserPage';
+import LandingPage from './landing/LandingPage';
+import CompanyPage from './company/CompanyPage';
+import UserPage from './user/UserPage';
 import SetUpPage from '../containers/SetUpPage';
 
 

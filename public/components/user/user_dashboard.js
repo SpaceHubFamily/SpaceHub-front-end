@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import roomApis from '../utils/api'
+import roomApis from '../../utils/api'
 import ShindigList from './shindig_list.js'
 import ShindigListItem from './shindig_list_item.js'
 

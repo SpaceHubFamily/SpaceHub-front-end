@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField';
+import Checkbox from 'material-ui/Checkbox';
+import ActionFavorite from 'material-ui/svg-icons/action/favorite';
+import ActionFavoriteBorder from 'material-ui/svg-icons/action/favorite-border';
+import Visibility from 'material-ui/svg-icons/action/visibility';
+import VisibilityOff from 'material-ui/svg-icons/action/visibility-off';
 
 
 // table.string('first_name');
@@ -15,16 +18,24 @@ import TextField from 'material-ui/TextField';
 
 
 
-class SetUpContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
+var SetUpPage = React.createClass({
+  handleToggleProvide: function (provideSpace) {
+    this.setState({
+      provideSpace: provideSpace
+    })
+  },
+  render: function functionName() {
+    var {provideSpace} = this.state
 
-    }
+    return(
+      <div>
+        <h1>Test set up</h1>
+      </div>
+    )
   }
-}
+})
 
-export default SetUpContainer
+
 
 
 
@@ -53,4 +64,4 @@ export default SetUpContainer
 //   </div>
 // );
 //
-// export default SetUpPage;
+export default SetUpPage;

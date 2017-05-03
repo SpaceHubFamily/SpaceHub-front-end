@@ -3,10 +3,11 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import FlatButton from 'material-ui/FlatButton';
 
 const PendingListItem = ({ pendingRoom }) => {
+  console.log(pendingRoom);
   return (
     <Card>
         <CardText>
-          <h3>Status: available</h3>
+          <h3>Status: pending </h3>
           <p>Room: {pendingRoom.room_name}</p>
           <p>Rate: {pendingRoom.day_rate}</p>
         </CardText>

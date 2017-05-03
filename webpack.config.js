@@ -2,6 +2,7 @@ var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+  devtool: 'source-map',
   entry: './public/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -13,9 +14,9 @@ module.exports = {
         loader: 'babel-loader',
 
         include: [
-          path.resolve(__dirname, "public"), 
+          path.resolve(__dirname, "public"),
         ],
-        test: /\.(js)$/, 
+        test: /\.(js)$/,
         query: {
           presets: ['es2015', 'stage-0', 'react']
         }

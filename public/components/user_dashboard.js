@@ -1,31 +1,31 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import roomApis from '../utils/api'
-import RoomList from './room_list.js'
-import RoomListItem from './room_list_item.js'
+import ShindigList from './shindig_list.js'
+import ShindigListItem from './shindig_list_item.js'
 
-class CompanyDashboard extends Component {
+class UserDashboard extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
-      rooms: []
+      shindigs: []
     }
   }
   componentDidMount() {
-    roomApis.getOpenRooms()
-    .then(rooms =>
-      this.setState({ rooms })
+    roomApis.getAllShindigs()
+    .then(shindigs =>
+      this.setState({ shindigs })
     )
   }
   render() {
     return (
       <div>
-        <RoomList rooms = {this.state.rooms} />
+        <ShindigList shindigs = {this.state.shindigs} />
       </div>
     )
   }
 
 }
 
-export default CompanyDashboard;
+export default UserDashboard;

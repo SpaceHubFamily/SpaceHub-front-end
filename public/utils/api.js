@@ -9,7 +9,8 @@ const roomApis = {
 
   getAllShindigs: function() {
     return axios.get('https://spacehubapi.herokuapp.com/shindig')
-      .then(response => response.data.filter(item => item.venue_owner === true) )
+      // .then(response => response.data.filter(item => item.room_id === 1) )
+      .then(response => response.data)
   }
 
 }

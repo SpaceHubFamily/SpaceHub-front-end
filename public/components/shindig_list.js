@@ -1,21 +1,21 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import RoomListItem from './room_list_item.js'
+import ShindigListItem from './shindig_list_item.js'
 
-const RoomList = (props) => {
-  const rooms = props.rooms
-  const roomList = rooms.map(room => {
-    return <RoomListItem key={room.room_name} room={room} />
+const ShindigList = (props) => {
+  const shindigs = props.shindigs
+  const shindigList = shindigs.map(shindig => {
+    return <ShindigListItem key={shindig.id} shindig={shindig} />
   })
 
   return (
     <div className="roomList">
       <h1>My dashboard</h1>
       <ul>
-        {roomList}
+        {shindigList}
       </ul>
     </div>
   )
 }
 
-export default RoomList
+export default ShindigList

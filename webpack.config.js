@@ -8,8 +8,18 @@ module.exports = {
     filename: 'index_bundle.js'
   },
   module: {
-    rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
+    loaders: [
+      {
+        loader: 'babel-loader',
+
+        include: [
+          path.resolve(__dirname, "public"), 
+        ],
+        test: /\.(js)$/, 
+        query: {
+          presets: ['es2015', 'stage-0', 'react']
+        }
+      },
       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
     ]
   },

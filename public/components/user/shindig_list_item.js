@@ -15,7 +15,7 @@ const ShindigListItem = ({ shindig }) => {
           avatar="https://unsplash.it/50/50"
         />
         <CardMedia>
-          <img src="https://nagenomics.files.wordpress.com/2014/08/id-100254315.jpg" className="card-img" />
+          <img src={shindig.room_img_url} className="card-img" />
         </CardMedia>
         {/* <CardTitle title={shindig.venue_city} /> */}
         <CardText className="card-text">

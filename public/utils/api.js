@@ -32,8 +32,8 @@ const roomApis = {
   // },
 
   getAllShindigs: function() {
-   return axios.get('https://spacehubapi.herokuapp.com/shindig')
-    .then(response => response.data)
+   return axios.get('https://spacehubapi.herokuapp.com/shindig/user/1')
+    .then(response => response.data.filter(item => item.shindig_available === true) )
   },
 }
 

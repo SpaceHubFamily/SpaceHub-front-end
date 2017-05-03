@@ -11,12 +11,12 @@ import passwordValidator from 'password-validator';
 
 const schema = new passwordValidator();
 
-schema.is().min(8)                                    // Minimum length 8 
-.is().max(100)                                  // Maximum length 100 
-.has().uppercase()                              // Must have uppercase letters 
-.has().lowercase()                              // Must have lowercase letters 
-.has().digits()                                 // Must have digits 
-                      // Should not have spaces 
+schema.is().min(8)                                    // Minimum length 8
+.is().max(100)                                  // Maximum length 100
+.has().uppercase()                              // Must have uppercase letters
+.has().lowercase()                              // Must have lowercase letters
+.has().digits()                                 // Must have digits
+                      // Should not have spaces
 
 
 export default class LoginModal extends React.Component {
@@ -43,7 +43,7 @@ export default class LoginModal extends React.Component {
     console.log('objectef');
     if (this.state.email === undefined) {
       return undefined;
-    } 
+    }
     if (EmailValidator.validate(this.state.email)) {
       return undefined;
     } else {

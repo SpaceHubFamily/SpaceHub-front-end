@@ -24,10 +24,8 @@ export default class DrawerSimpleExample extends React.Component {
             <p>My profile</p>
           </div>
           <div className="menu">
-            <MenuItem>My dashboard</MenuItem>
-            <MenuItem>Create New Room</MenuItem>
-            <MenuItem>Schedule</MenuItem>
-            <MenuItem>My venues/rooms</MenuItem>
+            <MenuItem>My Dashboard</MenuItem>
+            <MenuItem>My Events</MenuItem>
          </div>
       </div>
     </Drawer>

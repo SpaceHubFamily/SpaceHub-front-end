@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import roomApis from '../../utils/api'
+import roomApis from '../../utils/api.js'
 import RoomList from './room_list.js'
-import RoomListItem from './room_list_item.js'
+import RoomListItem from './room_list_item'
+import PendingListItem from './pending_list_item'
 
 class CompanyDashboard extends Component {
   constructor(props) {
@@ -10,17 +11,17 @@ class CompanyDashboard extends Component {
 
     this.state = {
       openRooms: [],
-      pendingRooms: []
+      pendingRooms: [],
+      bookedRooms: []
     }
-  }
-  componentDidMount() {
-    roomApis.getOpenRooms()
-    .then(openRooms =>
-      this.setState({ openRooms })
-    )
   }
 
   componentDidMount() {
+    roomApis.getOpenRooms()
+    .then(openRooms => {
+      this.setState({ openRooms })
+    })
+  
     roomApis.getPendingRooms()
     .then(pendingRooms =>
       this.setState({ pendingRooms })

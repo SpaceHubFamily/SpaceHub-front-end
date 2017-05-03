@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import SideNav from './SideNav'
+import SideNav from './SideNavUser'
 import UserDashboard from './user_dashboard.js'
 
 class UserPage extends Component {

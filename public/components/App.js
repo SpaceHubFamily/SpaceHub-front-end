@@ -4,11 +4,11 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { Switch, Route } from 'react-router';
-import {Provider} from 'react-redux';
 import LandingPage from './landing/LandingPage';
 import CompanyPage from './company/CompanyPage';
 import UserPage from './user/UserPage';
 import SetUpPage from '../containers/SetUpPage';
+import NewVenueForm from './company/newVenueForm';
 
 
 injectTapEventPlugin();
@@ -46,14 +46,6 @@ const muiTheme = getMuiTheme({
   }
 });
 
-
-var actions = require('../actions/actions.js');
-var setUpStore = require('../stores/setUpStore.js').configure();
-
-setUpStore.subscribe(() => {
-  console.log('New state', setUpStore.getState());
-});
-
 const App = () => (
   <MuiThemeProvider muiTheme={muiTheme}>
       <div>
@@ -61,9 +53,8 @@ const App = () => (
             <Route exact path="/" component={LandingPage} />
             <Route path="/company" component={CompanyPage} />
             <Route path="/user" component={UserPage} />
-            <Provider store={setUpStore}>
-              <Route path="/setup" component={SetUpPage} />
-            </Provider>
+            <Route path="/setup" component={SetUpPage} />
+            {/* <Route path="/newVenueForm" component={NewVenueForm} /> */}
         </Switch>
       </div>
   </MuiThemeProvider>

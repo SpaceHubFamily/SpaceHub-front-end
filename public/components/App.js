@@ -47,7 +47,7 @@ const muiTheme = getMuiTheme({
 });
 
 
-// var actions = require('actions');
+var actions = require('../actions/actions.js');
 var setUpStore = require('../stores/setUpStore.js').configure();
 
 setUpStore.subscribe(() => {

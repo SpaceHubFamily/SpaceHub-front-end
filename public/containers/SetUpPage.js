@@ -18,22 +18,29 @@ import VisibilityOff from 'material-ui/svg-icons/action/visibility-off';
 
 
 
-var SetUpPage = React.createClass({
-  handleToggleProvide: function (provideSpace) {
-    this.setState({
-      provideSpace: provideSpace
-    })
-  },
-  render: function functionName() {
-    var {provideSpace} = this.state
+class SetUpPage extends Component {
 
+  render(){
     return(
-      <div>
-        <h1>Test set up</h1>
-      </div>
+      <h1>Test</h1>
     )
   }
-})
+
+  // handleToggleProvide: function (provideSpace) {
+  //   this.setState({
+  //     provideSpace: provideSpace
+  //   })
+  // },
+  // render: function functionName() {
+  //   var {provideSpace} = this.state
+  //
+  //   return(
+  //     <div>
+  //       <h1>Test set up</h1>
+  //     </div>
+  //   )
+  // }
+}
 
 
 

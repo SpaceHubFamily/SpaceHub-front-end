@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar';
 import {cyan500} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -28,6 +29,7 @@ const Header = ({store}) => (
     onTitleTouchTap={handleTouchTap}
     showMenuIconButton={false}
     iconElementRight={<div className="nav-btns"><Login store={store}/><FlatButton label="SignUp" /></div>}
+
   />
 );
 

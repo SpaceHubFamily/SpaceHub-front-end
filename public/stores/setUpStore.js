@@ -1,14 +1,13 @@
 
 var redux = require('redux')
-// import {provideSpaceReducer} from '../reducers/setUpReducers.js'
 import {newVenueReducer} from '../reducers/newVenueReducers.js'
 
 export var configure = (initialState = {}) => {
-  var reducer = redux.combineReducers({
+  var reducers = redux.combineReducers({
     venues: newVenueReducer,
   });
 
-  var store = redux.createStore(reducer, initialState, redux.compose(
+  var store = redux.createStore(reducers, initialState, redux.compose(
     window.devToolsExtension ? window.devToolsExtension() : f => f
   ));
 

@@ -3,15 +3,15 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
 
-table.string('first_name');
-table.string('last_name');
-table.string('img_url');
-table.string('phone_number');
-table.string('company_name');
-table.string('email');
-table.string('description', [1000]);
-table.boolean('venue_owner');
-table.boolean('event_planner');
+// table.string('first_name');
+// table.string('last_name');
+// table.string('img_url');
+// table.string('phone_number');
+// table.string('company_name');
+// table.string('email');
+// table.string('description', [1000]);
+// table.boolean('venue_owner');
+// table.boolean('event_planner');
 
 
 

@@ -20,7 +20,7 @@ export default class DrawerSimpleExample extends React.Component {
       <Drawer>
         <div className="sidenav">
           <div className="myInfo">
-            <Avatar src="https://unsplash.it/70/70" size={50} />
+            <Avatar src="https://unsplash.it/70/70" size={60} />
             <p>My profile</p>
           </div>
           <div className="menu">

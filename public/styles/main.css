@@ -89,3 +89,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.myInfo {
+  margin: 10px 10px 250px 20px;
+}

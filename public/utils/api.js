@@ -15,14 +15,14 @@ const roomApis = {
   //     .then(response => response.data.filter(item => item.room_available === true) )
   // },
   getPendingRooms: function() {
-   return axios.get('https://spacehubapi.herokuapp.com/user/shindig_request/4')
+   return axios.get('https://spacehubapi.herokuapp.com/shindig_request/4')
     .then(response => response.data)
   },
 
   getConfirmedRooms: function() {
     return axios.get('https://spacehubapi.herokuapp.com/user/shindig/4')
       .then(response => response.data)
-  }
+  },
   // getPendingRooms: function() {
   //   return axios({
   //     url: 'https://spacehubapi.herokuapp.com/user/shindig/4',

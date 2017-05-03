@@ -18,20 +18,27 @@ class CompanyDashboard extends Component {
 
   componentDidMount() {
     roomApis.getOpenRooms()
-    .then(openRooms => {
+    .then(openRooms =>
       this.setState({ openRooms })
-    })
-  
+    )
+
     roomApis.getPendingRooms()
     .then(pendingRooms =>
       this.setState({ pendingRooms })
+    )
+
+    roomApis.getConfirmedRooms()
+    .then(bookedRooms =>
+      this.setState({ bookedRooms })
     )
   }
 
   render() {
     return (
       <div>
-        <RoomList openRooms = {this.state.openRooms} pendingRooms = {this.state.pendingRooms}/>
+        <RoomList openRooms = {this.state.openRooms}
+            pendingRooms = {this.state.pendingRooms}
+            bookedRooms = {this.state.bookedRooms} />
       </div>
     )
   }

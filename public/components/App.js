@@ -52,7 +52,6 @@ const App = () => (
         <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route path="/company" component={CompanyPage}>
-
             </Route>
             <Route path="/user" component={UserPage} />
             <Route path="/setup" component={SetUpPage} />

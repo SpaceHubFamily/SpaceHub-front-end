@@ -25,25 +25,17 @@ const style = {
   },
 
   input: {
-    // height: 100,
     width: '100%',
-    // margin: '0 50px 0 50px',
-    // textAlign: 'center'
-    // display: 'inline-block'
   },
   button: {
     height: 60,
-    // width: 'auto',
-    // margin: 0,
-    // textAlign: 'center',
-    // display: 'inline-block'
   }
-};
+}
 
 export var newVenueForm = React.createClass({
   handleSubmit: function (e) {
     e.preventDefault();
-    var {dispatch} = this.props;
+    var {dispatch} = this.props
 
     var newVenue = {}
 
@@ -63,14 +55,9 @@ export var newVenueForm = React.createClass({
     axios.post('https://spacehubapi.herokuapp.com/venue', newVenue)
     .then(res => console.log(res, 'good'))
     .catch(err => console.log(err, 'bad'))
-
-    // if (todoText.length > 0) {
-    //   this.refs.todoText.value = '';
-    // } else {
-    //   this.refs.todoText.focus();
-    // }
+    
   },
-  render: function () {
+  render: function ( touched ) {
     return (
       <div>
         <div style={style.title}>
@@ -83,72 +70,67 @@ export var newVenueForm = React.createClass({
           <TextField
             ref="name"
             style={style.input}
-            underlineShow={true}
-            errorText="This field is required"
+            // errorText={touched && "This field is required"}
             floatingLabelText="Venue Name"
-          /><Divider />
+          /><br/>
           <TextField
             ref="description"
             style={style.input}
-            underlineShow={true}
             // hintText="Describe your venue"
-            errorText="This field is required."
+            // errorText="This field is required."
             floatingLabelText="Description"
-            // multiLine={true}
-            // rows={2}
-          /><Divider />
+          /><br/>
           <TextField
             ref="img_url"
             style={style.input}
-            underlineShow={true}
             // hintText="Hint Text"
-            errorText="This field is required"
+            // errorText="This field is required"
             floatingLabelText="Image URL"
-          /><Divider />
+          /><br/>
           <TextField
             ref="address"
             style={style.input}
             // hintText="Hint Text"
-            errorText="This field is required."
+            // errorText="This field is required."
             floatingLabelText="Address"
-          /><Divider />
+          /><br/>
           <TextField
             ref="city"
             style={style.input}
             // hintText="Hint Text"
-            errorText="This field is required"
+            // errorText="This field is required"
             floatingLabelText="City"
-          /><Divider />
+          /><br/>
           <TextField
             ref="state"
             style={style.input}
             // hintText="Hint Text"
-            errorText="This field is required"
+            // errorText="This field is required"
             floatingLabelText="State"
-          /><Divider />
+          /><br/>
           <TextField
             ref="zip_code"
             type="number"
             style={style.input}
             // hintText="Hint Text"
-            errorText="This field is required"
+            // errorText="This field is required"
             floatingLabelText="Zip Code"
-          /><Divider />
+          /><br/>
           <TextField
             ref="email"
             style={style.input}
             type="email"
             // hintText="Hint Text"
-            errorText="This field is required"
+            // errorText="This field is required"
             floatingLabelText="Email"
-          /><Divider />
+          /><br/>
           <TextField
             ref="phone"
             style={style.input}
             // hintText="Hint Text"
-            errorText="This field is required"
+            // errorText="This field is required"
             floatingLabelText="Phone number"
-          /><Divider />
+          /><br/>
           <FlatButton
             style={style.button}
             onTouchTap={this.handleSubmit}

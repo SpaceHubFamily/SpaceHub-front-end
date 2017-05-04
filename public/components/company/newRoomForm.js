@@ -39,7 +39,7 @@ export var newRoomForm = React.createClass({
         <h1>Hello</h1>
         <TextField
           ref="name"
-          errorText="This field is required"
+          // errorText="This field is required"
           floatingLabelText="Name"
         /><br />
         <TextField

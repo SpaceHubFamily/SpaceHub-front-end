@@ -7,6 +7,7 @@ import FontIcon from 'material-ui/FontIcon';
 import Building from 'material-ui/svg-icons/social/location-city';
 var {connect} = require('react-redux');
 var actions = require('../../actions/newVenueActions');
+import EventSetter from './eventSetter'
 import axios from 'axios'
 
 const style = {
@@ -55,7 +56,7 @@ export var newVenueForm = React.createClass({
     axios.post('https://spacehubapi.herokuapp.com/venue', newVenue)
     .then(res => console.log(res, 'good'))
     .catch(err => console.log(err, 'bad'))
-    
+
   },
   render: function ( touched ) {
     return (

@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import SideNav from './SideNavUser'
 import UserDashboard from './user_dashboard.js'
+// import Mailer from './mailer'
 
 class UserPage extends Component {
 
@@ -19,6 +20,7 @@ class UserPage extends Component {
     return (
       <MuiThemeProvider>
         <div>
+          // <Mailer />
           <SideNav />
           <UserDashboard />
         </div>

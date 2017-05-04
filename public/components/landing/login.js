@@ -6,6 +6,7 @@ import TextField from 'material-ui/TextField';
 import axios from 'axios';
 import EmailValidator from 'email-validator';
 import passwordValidator from 'password-validator';
+import { Link } from 'react-router-dom'
 
 
 
@@ -68,11 +69,13 @@ export default class LoginModal extends React.Component {
   }
   render() {
     const actions = [
-      <FlatButton
-        label="login"
-        primary={true}
-        onTouchTap={this.login}
-      />,
+      <Link to='/company'>
+        <FlatButton
+          label="login"
+          primary={true}
+          onTouchTap={this.login}
+        />
+      </Link>
     ]
 
     console.log(this.props.store.user);
@@ -83,7 +86,7 @@ export default class LoginModal extends React.Component {
 
     return (
       <div>
-          <RaisedButton label="Login" onTouchTap={this.handleOpen} />
+          <FlatButton label="Login" onTouchTap={this.handleOpen} />
           <Dialog
             title="Login"
             actions={actions}

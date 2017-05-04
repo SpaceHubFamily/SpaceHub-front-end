@@ -60,7 +60,8 @@ const App = () => (
             <Route exact path="/" component={LandingPage} />
             <Route path="/company" component={CompanyPage}>
             </Route>
-            <Route path="/user" component={UserPage} />
+            <Route path="/user" component={UserPage}>
+            </Route>
             <Route path="/setup" component={SetUpPage} />
             <Route path="/newVenueForm" component={NewVenueForm} />
             <Route path="/newRoomForm" component={NewRoomForm} />

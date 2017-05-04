@@ -3,16 +3,21 @@ import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'mat
 import MaterialUi, { FlatButton, Avatar} from 'material-ui';
 
 const style = {
-  margin: 20,
-  fontSize: 20,
-  letterSpacing: 2,
-  fontFamily: 'Merriweather'
+  card: {
+    margin: 40,
+    letterSpacing: 2,
+    fontFamily: 'Merriweather',
+    zDepth: '3'
+  },
+  text: {
+    fontSize: 20
+  }
 }
 
 const BookedListItem = ({ bookedRoom }) => {
   return (
-    <Card style={style}>
-        <CardText>
+    <Card style={style.card}>
+        <CardText style={style.text}>
           <h3>Status: booked </h3>
           <p>Room: {bookedRoom.room_name}</p>
           <p>Rate: {bookedRoom.room_hourly_rate}</p>

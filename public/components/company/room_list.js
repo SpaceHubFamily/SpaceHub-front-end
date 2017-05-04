@@ -12,7 +12,6 @@ let style = {
 }
 
 const RoomList = ({openRooms, pendingRooms, bookedRooms}) => {
-
   const openRoomList = openRooms.map(room => {
     return <RoomListItem key={room.room_name} room={room} />
   })

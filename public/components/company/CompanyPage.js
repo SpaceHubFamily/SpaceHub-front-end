@@ -5,9 +5,13 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import SideNav from './SideNav'
 import CompanyDashboard from './company_dashboard.js'
+import Background from '../../styles/grey.png'
+
+let mainStyle = {
+  backgroundImage: `url(${Background})`
+}
 
 class CompanyPage extends Component {
-
   // var contentPane;
   // switch
   //   case
@@ -18,7 +22,7 @@ class CompanyPage extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <div>
+        <div style= { mainStyle }>
           <SideNav />
           <CompanyDashboard />
         </div>

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+SC|Orbitron');
+@import url('https://fonts.google.com/?query=merr&selection.family=Merriweather');
 /*
 font-family: 'Cormorant SC', serif;
 font-family: 'Orbitron', sans-serif;
+font-family: 'Merriweather', serif;
 */
 
 .lightBlue {
@@ -47,7 +49,7 @@ font-family: 'Orbitron', sans-serif;
 }
 
 .roomList {
-  margin: 0 35px 0 270px;
+  margin: 0 70px 0 300px;
 }
 
 .shindigList {
@@ -66,7 +68,6 @@ font-family: 'Orbitron', sans-serif;
 .card-text h4 {
   text-align: center;
 }
-
 
 body {
   margin: 0;
@@ -127,4 +128,9 @@ body {
 
 .myInfo {
   margin: 10px 10px 250px 20px;
+}
+
+.roomImg {
+  height:500px;
+  width: auto;
 }

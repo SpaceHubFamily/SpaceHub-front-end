@@ -21,7 +21,17 @@ module.exports = {
           presets: ['es2015', 'stage-0', 'react']
         }
       },
-      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
+      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]},
+      {
+        test: /\.(gif|jpe?g|png|svg)(\?.*)?$/,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {}
+          }
+  ]
+}
     ]
   },
   // resolve: {

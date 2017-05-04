@@ -1,9 +1,34 @@
 var React = require('react');
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
+import Divider from 'material-ui/Divider';
+import Paper from 'material-ui/Paper';
+import FontIcon from 'material-ui/FontIcon';
+import Building from 'material-ui/svg-icons/social/location-city';
 var {connect} = require('react-redux');
 var actions = require('../../actions/newVenueActions');
 import axios from 'axios'
+
+const style = {
+  paper: {
+    margin: 100,
+    padding: 50
+  },
+  input: {
+    // height: 100,
+    width: '100%',
+    // margin: '0 50px 0 50px',
+    // textAlign: 'center'
+    // display: 'inline-block'
+  },
+  button: {
+    height: 60,
+    // width: 'auto',
+    // margin: 0,
+    // textAlign: 'center',
+    // display: 'inline-block'
+  }
+};
 
 export var newVenueForm = React.createClass({
   handleSubmit: function (e) {
@@ -38,62 +63,87 @@ export var newVenueForm = React.createClass({
   render: function () {
     return (
       <div>
-        <TextField
-          ref="name"
-          errorText="This field is required"
-          floatingLabelText="Name"
-        /><br />
-        <TextField
-          ref="description"
-          // hintText="Describe your venue"
-          errorText="This field is required."
-          floatingLabelText="Description"
-          multiLine={true}
-          rows={2}
-        /><br />
-        <TextField
-          ref="img_url"
-          // hintText="Hint Text"
-          errorText="This field is required"
-          floatingLabelText="Image URL"
-        /><br />
-        <TextField
-          ref="address"
-          // hintText="Hint Text"
-          errorText="This field is required."
-          floatingLabelText="Address"
-        /><br />
-        <TextField
-          ref="city"
-          // hintText="Hint Text"
-          errorText="This field is required"
-          floatingLabelText="City"
-        /><br />
-        <TextField
-          ref="state"
-          // hintText="Hint Text"
-          errorText="This field is required"
-          floatingLabelText="State"
-        /><br />
-        <TextField
-          ref="zip_code"
-          // hintText="Hint Text"
-          errorText="This field is required"
-          floatingLabelText="Zip Code"
-        /><br />
-        <TextField
-          ref="email"
-          // hintText="Hint Text"
-          errorText="This field is required"
-          floatingLabelText="Email"
-        /><br />
-        <TextField
-          ref="phone"
-          // hintText="Hint Text"
-          errorText="This field is required"
-          floatingLabelText="Phone number"
-        /><br />
-        <FlatButton onTouchTap={this.handleSubmit} label="Default" />
+        <Paper
+          style={style.paper}
+          zDepth={2}>
+          <TextField
+            ref="name"
+            style={style.input}
+            underlineShow={true}
+            errorText="This field is required"
+            floatingLabelText="Venue Name"
+          /><Divider />
+          <TextField
+            ref="description"
+            style={style.input}
+            underlineShow={true}
+            // hintText="Describe your venue"
+            errorText="This field is required."
+            floatingLabelText="Description"
+            // multiLine={true}
+            // rows={2}
+          /><Divider />
+          <TextField
+            ref="img_url"
+            style={style.input}
+            underlineShow={true}
+            // hintText="Hint Text"
+            errorText="This field is required"
+            floatingLabelText="Image URL"
+          /><Divider />
+          <TextField
+            ref="address"
+            style={style.input}
+            // hintText="Hint Text"
+            errorText="This field is required."
+            floatingLabelText="Address"
+          /><Divider />
+          <TextField
+            ref="city"
+            style={style.input}
+            // hintText="Hint Text"
+            errorText="This field is required"
+            floatingLabelText="City"
+          /><Divider />
+          <TextField
+            ref="state"
+            style={style.input}
+            // hintText="Hint Text"
+            errorText="This field is required"
+            floatingLabelText="State"
+          /><Divider />
+          <TextField
+            ref="zip_code"
+            type="number"
+            style={style.input}
+            // hintText="Hint Text"
+            errorText="This field is required"
+            floatingLabelText="Zip Code"
+          /><Divider />
+          <TextField
+            ref="email"
+            style={style.input}
+            type="email"
+            // hintText="Hint Text"
+            errorText="This field is required"
+            floatingLabelText="Email"
+          /><Divider />
+          <TextField
+            ref="phone"
+            style={style.input}
+            // hintText="Hint Text"
+            errorText="This field is required"
+            floatingLabelText="Phone number"
+          /><Divider />
+          <FlatButton
+            style={style.button}
+            onTouchTap={this.handleSubmit}
+            labelPosition="before"
+            primary={true}
+            icon={<Building />}
+            fullWidth={true}
+            label="Create Venue" />
+        </Paper>
       </div>
     );
   }

@@ -134,3 +134,12 @@ body {
   height:500px;
   width: auto;
 }
+
+a {
+  text-decoration: none;
+  color: seaGreen;
+}
+
+h2, h1, h4 {
+  color: seaGreen;
+}

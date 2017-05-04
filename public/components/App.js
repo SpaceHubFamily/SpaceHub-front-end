@@ -11,7 +11,6 @@ import SetUpPage from '../containers/SetUpPage';
 import NewVenueForm from './company/newVenueForm';
 import NewRoomForm from './company/newRoomForm';
 
-
 injectTapEventPlugin();
 
 import {
@@ -52,7 +51,9 @@ const App = () => (
       <div>
         <Switch>
             <Route exact path="/" component={LandingPage} />
-            <Route path="/company" component={CompanyPage} />
+            <Route path="/company" component={CompanyPage}>
+
+            </Route>
             <Route path="/user" component={UserPage} />
             <Route path="/setup" component={SetUpPage} />
             <Route path="/newVenueForm" component={NewVenueForm} />

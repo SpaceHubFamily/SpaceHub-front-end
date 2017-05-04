@@ -35,6 +35,33 @@ const roomApis = {
    return axios.get('https://spacehubapi.herokuapp.com/shindig/user/1')
     .then(response => response.data.filter(item => item.shindig_available === true) )
   },
+
+  getConfirmedShindigs: function() {
+   return axios.get('https://spacehubapi.herokuapp.com/user/shindig/1')
+    .then(response => response.data )
+  },
+
+  getPendingShindigs: function() {
+   return axios.get('https://spacehubapi.herokuapp.com/shindig_request/user/4')
+    .then(pendingShindig => {
+      const shindigs = pendingShindig.data
+      const id = shindigs
+      const getUsers = []
+      for(let i = 0; i < shindigs.length; i++) {
+        const id = shindigs[i].owner_id
+        getUsers.push(
+            axios.get(`https://spacehubapi.herokuapp.com/user/${id}`)
+            .then(owner => ({
+              owner:owner.data[0],
+              shindig:shindigs[i]
+            }))
+        )
+      }
+      return Promise.all(getUsers)
+    })
+
+
+  },
 }
 
 export default roomApis

@@ -4,7 +4,7 @@ const roomApis = {
 
   getOpenRooms: function() {
    return axios.get('https://spacehubapi.herokuapp.com/room/user/4')
-    .then(response => response.data.filter(item => item.room_available === true) )
+    .then(response => response.data.filter(item => item.room_available === true))
   },
 
   // getOpenRooms: function() {
@@ -23,6 +23,12 @@ const roomApis = {
     return axios.get('https://spacehubapi.herokuapp.com/user/shindig/4')
       .then(response => response.data)
   },
+
+  getAllRoomsForUser: function() {
+   return axios.get('https://spacehubapi.herokuapp.com/room/user/4')
+    .then(response => response.data)
+  },
+
   // getPendingRooms: function() {
   //   return axios({
   //     url: 'https://spacehubapi.herokuapp.com/user/shindig/4',

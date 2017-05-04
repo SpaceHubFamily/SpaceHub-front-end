@@ -7,6 +7,12 @@ import NavLink from 'react-router-dom/NavLink'
 import CompanyDashboard from './company_dashboard'
 import NewRoomForm from './newRoomForm'
 
+let style={
+  fontSize: 20,
+  letterSpacing: 5,
+  fontFamily: 'Merriweather'
+}
+
 export default class DrawerSimpleExample extends Component {
 
   constructor(props) {
@@ -20,7 +26,7 @@ export default class DrawerSimpleExample extends Component {
 
   render() {
     return (
-      <Drawer>
+      <Drawer style = {style}>
         <div className="sidenav">
           <div className="myInfo">
             <Avatar src="https://unsplash.it/70/70" size={60} />

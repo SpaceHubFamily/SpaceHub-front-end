@@ -141,5 +141,7 @@ a {
 }
 
 h2, h1, h4 {
+  margin-top: 0px;
   color: seaGreen;
+  padding-top: 20px
 }

@@ -11,7 +11,7 @@ import NewRoomForm from './newRoomForm'
 import NewVenueForm from './newVenueForm'
 
 let mainStyle = {
-  backgroundImage: `url(${Background})`
+  backgroundImage: `url(${Background})`,
 }
 
 class CompanyPage extends Component {
@@ -23,7 +23,6 @@ class CompanyPage extends Component {
             <Route component={CompanyDashboard} exact path="/company"/>
               <Route component={NewRoomForm} path="/new-room"></Route>
               <Route component={NewVenueForm} path="/company/my-venues"></Route>
-            {/* </Route> */}
           </div>
         </MuiThemeProvider>
     )

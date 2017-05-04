@@ -11,9 +11,19 @@ import axios from 'axios'
 
 const style = {
   paper: {
-    margin: 100,
-    padding: 50
+    margin: '50px 60px 50px 400px',
+    padding: 70,
+    width: '60%',
+    zDepth: 2,
+
   },
+  title: {
+    margin: '0px 60px 50px 400px',
+    fontSize: 30,
+    zDepth: 2,
+    letterSpacing: 5
+  },
+
   input: {
     // height: 100,
     width: '100%',
@@ -63,6 +73,10 @@ export var newVenueForm = React.createClass({
   render: function () {
     return (
       <div>
+        <div style={style.title}>
+          <h2>Create New Venue</h2>
+          <Divider />
+        </div>
         <Paper
           style={style.paper}
           zDepth={2}>

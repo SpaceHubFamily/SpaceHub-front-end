@@ -1,4 +1,5 @@
 var React = require('react');
+import { Link } from 'react-router-dom'
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
@@ -55,7 +56,7 @@ export var newVenueForm = React.createClass({
     axios.post('https://spacehubapi.herokuapp.com/venue', newVenue)
     .then(res => console.log(res, 'good'))
     .catch(err => console.log(err, 'bad'))
-    
+
   },
   render: function ( touched ) {
     return (
@@ -131,7 +132,7 @@ export var newVenueForm = React.createClass({
             // errorText="This field is required"
             floatingLabelText="Phone number"
           /><br/>
-          <FlatButton
+          <Link to='/company'><FlatButton
             style={style.button}
             onTouchTap={this.handleSubmit}
             labelPosition="before"
@@ -139,6 +140,7 @@ export var newVenueForm = React.createClass({
             icon={<Building />}
             fullWidth={true}
             label="Create Venue" />
+          </Link>
         </Paper>
       </div>
     );

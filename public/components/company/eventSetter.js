@@ -19,12 +19,16 @@ class EventSetter extends React.Component {
     this.setState({open: true});
   };
 
-  handleClose = () => {
+  handleSubmitClose = () => {
     this.setState({open: false});
+
+    axios.post('https://spacehubapi.herokuapp.com/venue', newVenue)
+    .then(res => console.log(res, 'good'))
+    .catch(err => console.log(err, 'bad'))
   };
 
   render() {
-
+    console.log(this.props.roomID);
     var style = {
       imput: {
         display: 'inline'
@@ -36,7 +40,7 @@ class EventSetter extends React.Component {
         label="Ok"
         primary={true}
         keyboardFocused={true}
-        onTouchTap={this.handleClose}
+        onTouchTap={this.handleSubmitClose}
       />,
     ];
 

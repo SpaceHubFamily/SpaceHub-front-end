@@ -6,9 +6,9 @@ import {Provider} from 'react-redux';
 
 require('./styles/main.css');
 
-var actions = require('./actions/actions.js');
+//Initializes an empty store object
 var store = require('./stores/setUpStore.js').configure();
-
+//Listens and fires when state in store changes
 store.subscribe(() => {
   console.log('New state', store.getState());
 });
@@ -19,7 +19,6 @@ ReactDOM.render((
       <App/>
     </Provider>
   </HashRouter>
-
-     ),
-     document.getElementById('app')
+  ),
+  document.getElementById('app')
 );

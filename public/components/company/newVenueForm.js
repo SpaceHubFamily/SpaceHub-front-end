@@ -8,6 +8,7 @@ import FontIcon from 'material-ui/FontIcon';
 import Building from 'material-ui/svg-icons/social/location-city';
 var {connect} = require('react-redux');
 var actions = require('../../actions/newVenueActions');
+import EventSetter from './eventSetter'
 import axios from 'axios'
 
 const style = {

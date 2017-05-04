@@ -15,17 +15,17 @@ const style = {
   }
 }
 
-const RoomListItem = ({ room }) => {
+const VenuesRoomsListItem = ({ venuesRoom }) => {
 
   return (
     <Card style={style.card}>
         <CardText style={style.text}>
           <h3>Status: available</h3>
-          <p>Room: {room.room_name}</p>
-          <p>Rate: {room.day_rate}</p>
+          <p>Room: {venuesRoom.room_name}</p>
+          <p>Rate: {venuesRoom.day_rate}</p>
         </CardText>
-          <CardMedia overlay={<CardTitle title={`Venue: ${room.venue_name}`} />}>
-              <img src={room.room_img_url} className="roomImg"/>
+          <CardMedia overlay={<CardTitle title={`Venue: ${venuesRoom.venue_name}`} />}>
+              <img src={venuesRoom.room_img_url} className="roomImg"/>
           </CardMedia>
     </Card>
   )
@@ -33,4 +33,4 @@ const RoomListItem = ({ room }) => {
 
 
 
-export default RoomListItem
+export default VenuesRoomsListItem

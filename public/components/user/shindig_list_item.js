@@ -13,16 +13,16 @@ const ShindigListItem = ({ shindig }) => {
         <CardHeader
           title={shindig.company_name}
           subtitle={shindig.venue_name}
-          avatar="https://unsplash.it/50/50"
+          avatar={shindig.venue_img_url}
         />
         <CardMedia>
           <img src={shindig.room_img_url} className="card-img" />
         </CardMedia>
         {/* <CardTitle title={shindig.venue_city} /> */}
         <CardText className="card-text">
-          <h1>{shindig.start_time} - {shindig.end_time}</h1>
-          <h2>{shindig.shindig_date}</h2>
-          <h4>{shindig.venue_city}, {shindig.venue_state}</h4>
+          <h1 className="shindig-time">{shindig.start_time} - {shindig.end_time}</h1>
+          <h2 className="shindig-date">{shindig.shindig_date}</h2>
+          <h4 className="shindig-location">{shindig.venue_city}, {shindig.venue_state}</h4>
         </CardText>
         <CardActions>
           <RequestButton shindig={shindig} />

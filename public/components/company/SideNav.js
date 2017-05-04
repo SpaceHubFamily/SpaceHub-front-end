@@ -1,10 +1,16 @@
-import React from 'react';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
-import Avatar from 'material-ui/Avatar';
+import React, { Component } from 'react';
+import MaterialUi, {Avatar, Divider, RaisedButton, Drawer, MenuItem } from 'material-ui';
+import NavLink from 'react-router-dom/NavLink'
+import CompanyDashboard from './company_dashboard'
+import NewRoomForm from './newRoomForm'
 
-export default class DrawerSimpleExample extends React.Component {
+let style={
+  fontSize: 20,
+  letterSpacing: 5,
+  fontFamily: 'Merriweather'
+}
+
+export default class DrawerSimpleExample extends Component {
 
   constructor(props) {
     super(props);
@@ -17,17 +23,24 @@ export default class DrawerSimpleExample extends React.Component {
 
   render() {
     return (
-      <Drawer>
+      <Drawer style = {style}>
         <div className="sidenav">
           <div className="myInfo">
             <Avatar src="https://unsplash.it/70/70" size={60} />
-            <p>My profile</p>
+            <h4>My profile</h4>
+            <Divider />
           </div>
           <div className="menu">
-            <MenuItem>My dashboard</MenuItem>
-            <MenuItem>Create New Room</MenuItem>
-            <MenuItem>Schedule</MenuItem>
-            <MenuItem>My venues/rooms</MenuItem>
+            <MenuItem><NavLink exact activeClassName="active" to='/company'>My dashboard</NavLink></MenuItem>
+            <Divider />
+            <MenuItem><NavLink activeClassName="active" to='/company/new-room'>New Room</NavLink></MenuItem>
+            <Divider />
+            <MenuItem><NavLink activeClassName="active" to='/company/new-venue'>New Venue</NavLink></MenuItem>
+            <Divider />
+            <MenuItem><NavLink activeClassName="active" to='/company/schedule'>Schedule</NavLink></MenuItem>
+            <Divider />
+            <MenuItem><NavLink activeClassName="active" to='/company/my-venues'>My venues/rooms</NavLink></MenuItem>
+            <Divider />
          </div>
       </div>
     </Drawer>

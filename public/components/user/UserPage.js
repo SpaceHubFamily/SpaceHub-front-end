@@ -5,7 +5,10 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import SideNav from './SideNavUser'
 import UserDashboard from './user_dashboard.js'
-// import Mailer from './mailer'
+
+import MyConfirmedEvents from './MyConfirmedEvents.js'
+import MyPendingEvents from './MyPendingEvents.js'
+
 
 class UserPage extends Component {
 
@@ -23,6 +26,8 @@ class UserPage extends Component {
           // <Mailer />
           <SideNav />
           <UserDashboard />
+          <MyConfirmedEvents />
+          <MyPendingEvents />
         </div>
       </MuiThemeProvider>
     )

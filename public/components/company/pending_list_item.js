@@ -5,17 +5,23 @@ import MaterialUI, { Avatar, Layout } from 'material-ui'
 
 
 const style = {
-  margin: 20,
-  fontSize: 20,
-  letterSpacing: 2,
-  fontFamily: 'Merriweather'
+  card: {
+    margin: 40,
+    fontSize: 20,
+    letterSpacing: 2,
+    fontFamily: 'Merriweather',
+    zDepth: '3'
+  },
+  text: {
+    fontSize: 20
+  }
 }
 
 const PendingListItem = ({ pendingRoom }) => {
 
   return (
-    <Card style={style}>
-      <CardText>
+    <Card style={style.card}>
+      <CardText style={style.text}>
         <h3>Room: {pendingRoom.room_name}</h3>
       </CardText>
       <CardHeader

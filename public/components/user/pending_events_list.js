@@ -6,22 +6,21 @@ import ActionAndroid from 'material-ui/svg-icons/action/android';
 import FontIcon from 'material-ui/FontIcon';
 
 
-const ShindigListItem = ({ shindig }) => {
+const PendingEventsList = ({ event }) => {
   return (
-    <Card key={shindig}>
+    <Card key={event}>
         <CardHeader
-          title={shindig.company_name}
-          subtitle={shindig.venue_name}
-          avatar={shindig.venue_img_url}
+          title={event.owner.company_name}
+          subtitle={event.shindig.venue_name}
+          avatar={event.shindig.venue_img_url}
         />
         <CardMedia>
-          <img src={shindig.room_img_url} className="card-img" />
+          <img src={event.shindig.room_img_url} className="card-img" />
         </CardMedia>
-        {/* <CardTitle title={shindig.venue_city} /> */}
         <CardText className="card-text">
-          <h1 className="shindig-time">{shindig.start_time} - {shindig.end_time}</h1>
-          <h2 className="shindig-date">{shindig.shindig_date}</h2>
-          <h4 className="shindig-location">{shindig.venue_city}, {shindig.venue_state}</h4>
+          <h1 className="event-time">{event.shindig.start_time} - {event.shindig.end_time}</h1>
+          <h2 className="event-date">{event.shindig.requested_date}</h2>
+          <h4 className="event-location">{event.shindig.city}, {event.shindig.state}</h4>
         </CardText>
         <CardActions>
           <div className="req-contain">
@@ -29,7 +28,7 @@ const ShindigListItem = ({ shindig }) => {
               className="request-btn"
               href=""
               target="_blank"
-              label="Request Space"
+              label="Response Pending"
               icon={<FontIcon className="muidocs-icon-custom-github" />}
             />
           </div>
@@ -40,4 +39,4 @@ const ShindigListItem = ({ shindig }) => {
 
 
 
-export default ShindigListItem
+export default PendingEventsList

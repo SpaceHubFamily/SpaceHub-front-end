@@ -2,9 +2,16 @@
 @import url('https://fonts.google.com/?query=merr&selection.family=Merriweather');
 /*
 font-family: 'Cormorant SC', serif;
+font-family: 'Merriweather', serif;
 font-family: 'Orbitron', sans-serif;
 font-family: 'Merriweather', serif;
 */
+
+body {
+  margin: 0;
+  background-color: #FAFBFC;
+  font-family: 'Merriweather', serif;
+}
 
 .lightBlue {
   color: rgba(17, 189, 255, 1);
@@ -69,11 +76,6 @@ font-family: 'Merriweather', serif;
   text-align: center;
 }
 
-body {
-  margin: 0;
-  background-color: #FAFBFC;
-}
-
 .nav-btns {
   margin-top: 4px;
   color: #fff;
@@ -120,14 +122,134 @@ body {
   text-shadow: -2px 2px 0px rgba(20, 20, 20, 1);
 }
 
+.main-description {
+  color: #e6e6e6;
+  z-index:1;
+  top: 65%;
+  max-width: 100%;
+  position: absolute;
+  font-family: 'Merriweather', serif;
+  font-size: 16px !important;
+  background-color: rgba(24,11,11,.5);
+  text-align: center;
+  line-height: 2;
+  text-shadow: -2px 0.5px 0px rgba(20, 20, 20, 1);
+  letter-spacing: 1.2px;
+  word-spacing: 1px;
+}
+
+.main-text {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .video-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* CompanySideNav */
+
 .myInfo {
   margin: 10px 10px 50px 20px;
+}
+
+/* UserSideNav */
+
+.side-nav {
+
+}
+
+.profile img {
+  border: 10px;
+  border-color: #fff !important;
+  border-width: medium;
+  border-radius: 52% !important;
+}
+
+.profile h1 {
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px !important;
+}
+
+.profile {
+  text-align: center;
+  padding-left: 0px;
+  vertical-align: middle;
+  padding-top: 10px;
+  background-color: rgba(91, 72, 175, 1);
+}
+
+.profile p {
+  margin-bottom: 0;
+  padding-bottom: 18px;
+}
+.side-nav-menu {
+
+}
+
+
+
+
+/* User Page Cards */
+
+.request-btn {
+  height: 10%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #bafb9a !important;
+}
+
+.shindig-time {
+
+}
+.shindig-date {
+
+}
+.shindig-location {
+  margin: 0;
+}
+
+.request-btn button {
+  /*background-color: rgba(62, 207, 142, 1) !important;*/
+}
+
+.req-contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0 !important;
+}
+
+.card-img {
+  overflow-y: hidden;
+  max-height: 200px;
+}
+
+.roomList {
+  margin: 0 35px 0 270px;
+}
+
+.shindigList {
+  margin: 0 12px 0 270px;
+}
+
+
+.card-text h1 {
+  text-align: center;
+}
+
+.card-text h2 {
+  text-align: center;
+}
+
+.card-text h4 {
+  text-align: center;
 }
 
 .roomImg {

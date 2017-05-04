@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Cormorant+SC|Merriweather|Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+SC|Orbitron');
+@import url('https://fonts.google.com/?query=merr&selection.family=Merriweather');
 /*
 font-family: 'Cormorant SC', serif;
 font-family: 'Merriweather', serif;
 font-family: 'Orbitron', sans-serif;
+font-family: 'Merriweather', serif;
 */
 
 body {
@@ -35,8 +37,44 @@ body {
   color: rgba(91, 72, 175, 1);
 }
 
+.request-btn {
+  height: 10%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* Landing Page Header */
+.req-contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img {
+  overflow-y: hidden;
+  max-height: 200px;
+}
+
+.roomList {
+  margin: 0 70px 0 300px;
+}
+
+.shindigList {
+  margin: 0 12px 0 270px;
+}
+
+
+.card-text h1 {
+  text-align: center;
+}
+
+.card-text h2 {
+  text-align: center;
+}
+
+.card-text h4 {
+  text-align: center;
+}
 
 .nav-btns {
   margin-top: 4px;
@@ -212,4 +250,20 @@ body {
 
 .card-text h4 {
   text-align: center;
+}
+
+.roomImg {
+  height:500px;
+  width: auto;
+}
+
+a {
+  text-decoration: none;
+  color: seaGreen;
+}
+
+h2, h1, h4 {
+  margin-top: 0px;
+  color: seaGreen;
+  padding-top: 20px
 }

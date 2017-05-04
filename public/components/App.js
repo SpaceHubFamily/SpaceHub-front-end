@@ -33,9 +33,6 @@ import spacing from 'material-ui/styles/spacing';
 
 
 const muiTheme = getMuiTheme({
-  palette: {
-    textColor: indigo300,
-  },
   appBar: {
     height: 70,
     color: white,
@@ -43,7 +40,17 @@ const muiTheme = getMuiTheme({
   },
   avatar: {
     borderColor: white,
-  }
+  },
+  drawer: {
+    width: spacing.desktopKeylineIncrement * 4,
+    color: lightBlue900,
+  },
+  button: {
+    height: 36,
+    minWidth: 88,
+    iconButtonSize: spacing.iconSize * 2,
+  },
+
 });
 
 const App = () => (
@@ -52,7 +59,6 @@ const App = () => (
         <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route path="/company" component={CompanyPage}>
-
             </Route>
             <Route path="/user" component={UserPage} />
             <Route path="/setup" component={SetUpPage} />

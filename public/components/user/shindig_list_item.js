@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import ActionAndroid from 'material-ui/svg-icons/action/android';
-import FontIcon from 'material-ui/FontIcon';
-import RequestButton from './requestButton'
+import ToggleStar from 'material-ui/svg-icons//toggle/star';
+import ShindigRequest from './ShindigRequest.js';
+import RaisedButton from 'material-ui/RaisedButton';
 
+
+const style = {
+  card: {
+    marginBottom: '30px',
+  },
+};
 
 const ShindigListItem = ({ shindig }) => {
   console.log(shindig);
   return (
-    <Card key={shindig}>
+    <Card key={shindig} style={style.card}>
         <CardHeader
           title={shindig.company_name}
           subtitle={shindig.venue_name}
@@ -25,7 +31,9 @@ const ShindigListItem = ({ shindig }) => {
           <h4 className="shindig-location">{shindig.venue_city}, {shindig.venue_state}</h4>
         </CardText>
         <CardActions>
-          <RequestButton shindig={shindig} />
+          <div className="req-contain">
+            <ShindigRequest />
+          </div>
         </CardActions>
     </Card>
   )

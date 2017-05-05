@@ -1,10 +1,13 @@
-import React from 'react';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
-import Avatar from 'material-ui/Avatar';
-import Divider from 'material-ui/Divider';
+import React, { Component } from 'react';
+import MaterialUi, {Avatar, Divider, RaisedButton, Drawer, MenuItem } from 'material-ui';
+import NavLink from 'react-router-dom/NavLink'
+import CompanyDashboard from './user_dashboard'
 
+let style={
+  fontSize: 20,
+  letterSpacing: 5,
+  fontFamily: 'Merriweather'
+}
 
 export default class DrawerSimpleExample extends React.Component {
 
@@ -19,24 +22,27 @@ export default class DrawerSimpleExample extends React.Component {
 
   render() {
     return (
-      <Drawer>
-        <div className="side-nav">
-          <div className="profile">
-            <h1 className="side-nav-title">SpaceHub</h1>
-            <Avatar src="http://youqueen.com/wp-content/themes/RoyalMasonry/images/haircuts/square-celebrity-2.png" size={70} />
-            <p>My profile</p>
+      <Drawer style = {style}>
+        <div className="sidenav">
+          <div className="myInfo">
+            <Avatar src="http://youqueen.com/wp-content/themes/RoyalMasonry/images/haircuts/square-celebrity-2.png" size={60} />
+            <h4>My profile</h4>
+            <Divider />
           </div>
-          <Divider />
-          <div className="side-nav-menu">
-            <MenuItem>My Dashboard</MenuItem>
+          <div className="menu">
+            <NavLink exact activeClassName="active" to='/user'><MenuItem>My Dashboard</MenuItem></NavLink>
             <Divider />
-            <MenuItem>Confirmed Events</MenuItem>
+            <NavLink activeClassName="active" to='/user/confirmed'><MenuItem>Confirmed Events</MenuItem></NavLink>
             <Divider />
-            <MenuItem>Pending Events</MenuItem>
+            <NavLink activeClassName="active" to='/user/pending'><MenuItem>Pending Events</MenuItem></NavLink>
             <Divider />
-         </div>
-      </div>
-    </Drawer>
+            <NavLink activeClassName="active" to='/company'><MenuItem>Company view</MenuItem></NavLink>
+            <Divider />
+            <NavLink exact activeClassName="active" to='/'><MenuItem>Sign out</MenuItem></NavLink>
+            <Divider />
+          </div>
+        </div>
+      </Drawer>
     );
   }
 }

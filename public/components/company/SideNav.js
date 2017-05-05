@@ -31,19 +31,19 @@ export default class DrawerSimpleExample extends Component {
             <Divider />
           </div>
           <div className="menu">
-            <MenuItem><NavLink exact activeClassName="active" to='/company'>My dashboard</NavLink></MenuItem>
+            <NavLink exact activeClassName="active" to='/company'><MenuItem>My dashboard</MenuItem></NavLink>
             <Divider />
-            <MenuItem><NavLink activeClassName="active" to='/company/new-room'>New Room</NavLink></MenuItem>
+            <NavLink activeClassName="active" to='/company/new-room'><MenuItem>New Room</MenuItem></NavLink>
             <Divider />
-            <MenuItem><NavLink activeClassName="active" to='/company/new-venue'>New Venue</NavLink></MenuItem>
+            <NavLink activeClassName="active" to='/company/new-venue'><MenuItem>New Venue</MenuItem></NavLink>
             <Divider />
-            <MenuItem><NavLink activeClassName="active" to='/company/schedule'>Schedule</NavLink></MenuItem>
+            <NavLink activeClassName="active" to='/company/schedule'><MenuItem>Schedule</MenuItem></NavLink>
             <Divider />
-            <MenuItem><NavLink activeClassName="active" to='/company/my-venues'>My venues/rooms</NavLink></MenuItem>
+            <NavLink activeClassName="active" to='/company/my-venues'><MenuItem>My venues/rooms</MenuItem></NavLink>
             <Divider />
          </div>
       </div>
     </Drawer>
-    );
+    )
   }
 }

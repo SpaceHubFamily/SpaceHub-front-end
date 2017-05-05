@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 import ToggleStar from 'material-ui/svg-icons//toggle/star';
+import ShindigRequest from './ShindigRequest.js';
+import RaisedButton from 'material-ui/RaisedButton';
 
 
 const style = {
@@ -30,14 +31,8 @@ const ShindigListItem = ({ shindig }) => {
         </CardText>
         <CardActions>
           <div className="req-contain">
-            <RaisedButton
-              className="request-btn"
-              href=""
-              labelPosition="before"
-              target="_blank"
-              label="Request Space"
-              icon={<ToggleStar />}
-            />
+            <ShindigRequest />
+
           </div>
         </CardActions>
     </Card>

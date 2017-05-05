@@ -1,4 +1,6 @@
 var React = require('react');
+import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom'
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
@@ -7,6 +9,7 @@ import FontIcon from 'material-ui/FontIcon';
 import Building from 'material-ui/svg-icons/social/location-city';
 var {connect} = require('react-redux');
 var actions = require('../../actions/newVenueActions');
+import EventSetter from './eventSetter'
 import axios from 'axios'
 
 const style = {
@@ -53,11 +56,17 @@ export var newVenueForm = React.createClass({
     dispatch(actions.addNewVenue(newVenue));
 
     axios.post('https://spacehubapi.herokuapp.com/venue', newVenue)
-    .then(res => console.log(res, 'good'))
+    .then(res => {
+      console.log(res, 'good')
+      // this.setState({redirect: true});
+    })
     .catch(err => console.log(err, 'bad'))
-    
   },
   render: function ( touched ) {
+
+    // if (this.state.redirect) {
+    //   return <Redirect push to="/sample" />;
+    // }
     return (
       <div>
         <div style={style.title}>
@@ -131,7 +140,7 @@ export var newVenueForm = React.createClass({
             // errorText="This field is required"
             floatingLabelText="Phone number"
           /><br/>
-          <FlatButton
+          <Link to='/company'><FlatButton
             style={style.button}
             onTouchTap={this.handleSubmit}
             labelPosition="before"
@@ -139,6 +148,7 @@ export var newVenueForm = React.createClass({
             icon={<Building />}
             fullWidth={true}
             label="Create Venue" />
+          </Link>
         </Paper>
       </div>
     );

@@ -26,7 +26,7 @@ const RoomList = ({openRooms, pendingRooms, bookedRooms, handleDelete}) => {
 
   return (
     <div className="roomList" style={style}>
-      <h1>My dashboard</h1>
+      <h1>My Dashboard</h1>
       <Divider />
       <ul>
         <h2>Pending Requests</h2>

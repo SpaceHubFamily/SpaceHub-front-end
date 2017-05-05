@@ -31,7 +31,7 @@ export default class DrawerSimpleExample extends Component {
             <Divider />
           </div>
           <div className="menu">
-            <NavLink exact activeClassName="active" to='/company'><MenuItem>My dashboard</MenuItem></NavLink>
+            <NavLink exact activeClassName="active" to='/company'><MenuItem>My Dashboard</MenuItem></NavLink>
             <Divider />
             <NavLink activeClassName="active" to='/company/new-room'><MenuItem>New Room</MenuItem></NavLink>
             <Divider />
@@ -41,9 +41,9 @@ export default class DrawerSimpleExample extends Component {
             <Divider />
             <NavLink activeClassName="active" to='/company/my-venues'><MenuItem>My venues/rooms</MenuItem></NavLink>
             <Divider />
-            <NavLink activeClassName="active" to='/user'><MenuItem>User view</MenuItem></NavLink>
+            <NavLink activeClassName="active" to='/user'><MenuItem>User View</MenuItem></NavLink>
             <Divider />
-            <NavLink exact activeClassName="active" to='/'><MenuItem>Sign out</MenuItem></NavLink>
+            <NavLink exact activeClassName="active" to='/'><MenuItem>Sign Out</MenuItem></NavLink>
             <Divider />
          </div>
       </div>

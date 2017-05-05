@@ -12,6 +12,12 @@ body {
   background-color: #FAFBFC;
   font-family: 'Merriweather', serif;
 }
+
+.background {
+  background-image: url(./grey.png);
+  background-repeat: repeat;
+}
+
 .lightGrey {
   color: rgba(178, 178, 179, 0.86);
 }
@@ -56,14 +62,6 @@ body {
 .card-img {
   overflow-y: hidden;
   max-height: 200px;
-}
-
-.roomList {
-  margin: 0 70px 0 300px;
-}
-
-.shindigList {
-  margin: 0 50px 0 270px;
 }
 
 
@@ -205,15 +203,8 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  background-color: #bafb9a !important;
 }
 
-.shindig-time {
-
-}
-.shindig-date {
-
-}
 .shindig-location {
   margin: 0;
 }
@@ -234,12 +225,25 @@ body {
   max-height: 200px;
 }
 
+/*.roomList {
+  margin: 0 70px 0 300px;
+}
+
+.shindigList {
+  margin: 0 70px 0 300px;
+}*/
+
 .roomList {
   margin: 0 35px 0 270px;
 }
 
 .shindigList {
-  margin: 0 12px 0 270px;
+  margin: 0 35px 0 270px;
+}
+
+.shindigList > h1 {
+  font-size: 40px;
+  letter-spacing: 5px;
 }
 
 

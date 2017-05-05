@@ -10,19 +10,17 @@ import UserDashboard from './user_dashboard.js'
 import MyConfirmedEvents from './MyConfirmedEvents.js'
 import MyPendingEvents from './MyPendingEvents.js'
 
+// let mainStyle = {
+//   backgroundImage: `url(${Background})`,
+// }
+
 class UserPage extends Component {
 
-  // var contentPane;
-  // switch
-  //   case
-  //   contentPane = <RoomList rooms = {this.state.rooms} />
-  // read from redux state
-  // depending on sidenav state of what's been clicked
-  // render either RoomList, CreateNewRoom, Schedule, Venue components
   render() {
     return (
       <MuiThemeProvider>
-        <div>
+        <div className="background">
+          {/* <div style= { mainStyle }> */}
           <SideNav />
           <Route component={UserDashboard} exact path="/user"></Route>
           <Route component={MyConfirmedEvents} path="/user/confirmed"></Route>

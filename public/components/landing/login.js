@@ -93,7 +93,7 @@ export default class LoginModal extends React.Component {
             modal={false}
             open={this.state.open}
             onRequestClose={this.handleClose}
-    <Divider />
+
             <TextField
               hintText="Email field"
               floatingLabelText="Email"

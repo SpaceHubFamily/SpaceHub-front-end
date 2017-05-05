@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton'
-import MaterialUI, { Avatar, Layout } from 'material-ui'
+import { Avatar, Layout, CircularProgress } from 'material-ui'
 
 
 const style = {
@@ -17,8 +17,10 @@ const style = {
   }
 }
 
-const PendingListItem = ({ pendingRoom }) => {
-
+const PendingListItem = ({ pendingRoom, handleDelete }) => {
+  if(!pendingRoom) {
+    return <CircularProgress />
+  }
   return (
     <Card style={style.card}>
       <CardText style={style.text}>
@@ -30,7 +32,7 @@ const PendingListItem = ({ pendingRoom }) => {
           avatar={<Avatar src={pendingRoom.requester_img_url} size={70}/>}
         />
         <CardActions>
-          <FlatButton label="Accept" />
+          <FlatButton onClick={handleDelete} label="Accept"/>
           <FlatButton label="Decline" />
         </CardActions>
         <CardMedia overlay={<CardTitle title={`Requested for: ${pendingRoom.requested_date}`} subtitle={`From ${pendingRoom.start_time} till ${pendingRoom.end_time}`} />}>

@@ -33,11 +33,17 @@ class CompanyDashboard extends Component {
     )
   }
 
+  handleDelete() {
+    roomApis.postConfirmedShindig(2)
+      .then(result => console.log(result))
+  }
+
   render() {
     return (
       <div>
         <RoomList openRooms = {this.state.openRooms}
             pendingRooms = {this.state.pendingRooms}
+            handleDelete = {this.handleDelete}
             bookedRooms = {this.state.bookedRooms} />
       </div>
     )

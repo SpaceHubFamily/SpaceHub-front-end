@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText, CircularProgress, FlatButton} from 'material-ui';
 
 const style = {
   card: {
@@ -16,7 +15,9 @@ const style = {
 }
 
 const VenuesRoomsListItem = ({ venuesRoom }) => {
-
+if(!venuesRoom) {
+  return <CircularProgress />
+}
   return (
     <Card style={style.card}>
         <CardText style={style.text}>

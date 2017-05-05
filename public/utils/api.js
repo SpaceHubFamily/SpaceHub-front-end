@@ -14,7 +14,7 @@ const roomApis = {
   //     withCredentials: true})
   //     .then(response => response.data.filter(item => item.room_available === true) )
   // },
-  
+
   getPendingRooms: function() {
    return axios.get('https://spacehubapi.herokuapp.com/shindig_request/user/4')
     .then(response => response.data)
@@ -28,6 +28,17 @@ const roomApis = {
   getAllRoomsForUser: function() {
    return axios.get('https://spacehubapi.herokuapp.com/room/user/4')
     .then(response => response.data)
+  },
+
+  postConfirmedShindig: function(id) {
+    console.log(id);
+    return axios({
+      url: `https://spacehubapi.herokuapp.com/shindig/${id}`,
+      method: 'patch',
+      data: {
+        available: "false"
+      }
+    })
   },
 
   // getPendingRooms: function() {

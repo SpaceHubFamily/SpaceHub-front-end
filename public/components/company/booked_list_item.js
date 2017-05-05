@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import MaterialUi, { FlatButton, Avatar} from 'material-ui';
+import { FlatButton, Avatar, CircularProgress} from 'material-ui';
 
 const style = {
   card: {
@@ -15,6 +15,9 @@ const style = {
 }
 
 const BookedListItem = ({ bookedRoom }) => {
+  if(!bookedRoom) {
+    return <CircularProgress />
+  }
   return (
     <Card style={style.card}>
         <CardText style={style.text}>

@@ -11,13 +11,13 @@ let style = {
   fontFamily: 'Merriweather'
 }
 
-const RoomList = ({openRooms, pendingRooms, bookedRooms}) => {
+const RoomList = ({openRooms, pendingRooms, bookedRooms, handleDelete}) => {
   const openRoomList = openRooms.map(room => {
     return <RoomListItem key={room.room_name} room={room} />
   })
 
   const pendingRoomList = pendingRooms.map(pendingRoom => {
-     return <PendingListItem key={pendingRoom.shindig_id} pendingRoom={pendingRoom} />
+     return <PendingListItem key={pendingRoom.shindig_id} pendingRoom={pendingRoom} handleDelete={handleDelete}/>
   })
 
   const bookedRoomList = bookedRooms.map(bookedRoom => {

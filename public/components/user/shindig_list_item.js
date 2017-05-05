@@ -2,13 +2,18 @@ import React, { Component } from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
-import ActionAndroid from 'material-ui/svg-icons/action/android';
-import FontIcon from 'material-ui/FontIcon';
+import ToggleStar from 'material-ui/svg-icons//toggle/star';
 
+
+const style = {
+  card: {
+    marginBottom: '30px',
+  },
+};
 
 const ShindigListItem = ({ shindig }) => {
   return (
-    <Card key={shindig}>
+    <Card key={shindig} style={style.card}>
         <CardHeader
           title={shindig.company_name}
           subtitle={shindig.venue_name}
@@ -28,9 +33,10 @@ const ShindigListItem = ({ shindig }) => {
             <RaisedButton
               className="request-btn"
               href=""
+              labelPosition="before"
               target="_blank"
               label="Request Space"
-              icon={<FontIcon className="muidocs-icon-custom-github" />}
+              icon={<ToggleStar />}
             />
           </div>
         </CardActions>

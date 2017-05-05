@@ -36,6 +36,10 @@ export default class DrawerSimpleExample extends React.Component {
             <Divider />
             <NavLink activeClassName="active" to='/user/pending'><MenuItem>Pending Events</MenuItem></NavLink>
             <Divider />
+            <NavLink activeClassName="active" to='/company'><MenuItem>Company view</MenuItem></NavLink>
+            <Divider />
+            <NavLink exact activeClassName="active" to='/'><MenuItem>Sign out</MenuItem></NavLink>
+            <Divider />
           </div>
         </div>
       </Drawer>

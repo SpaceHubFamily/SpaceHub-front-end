@@ -28,7 +28,7 @@ const Header = ({store}) => (
     // title={<span style={styles.title}>SpaceHub</span>}
     onTitleTouchTap={handleTouchTap}
     showMenuIconButton={false}
-    iconElementRight={<div className="nav-btns"><Login store={store}/><FlatButton label="SignUp" /></div>}
+    iconElementRight={<div className="nav-btns"><Login store={store}/></div>}
 
   />
 );

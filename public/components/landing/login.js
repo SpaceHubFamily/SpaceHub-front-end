@@ -83,7 +83,7 @@ export default class LoginModal extends React.Component {
 
     return (
       <div>
-          <RaisedButton label="Login" onTouchTap={this.handleOpen} />
+          <FlatButton label="Login" onTouchTap={this.handleOpen} />
           <Dialog
             title="Login"
             actions={actions}

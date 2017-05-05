@@ -9,7 +9,7 @@ class VenuesDash extends Component {
     super(props)
 
     this.state = {
-      allOpenRooms: []
+      allOpenRooms: [],
     }
   }
 
@@ -23,7 +23,7 @@ class VenuesDash extends Component {
   render() {
     return (
       <div>
-        <VenuesRoomsList allOpenRooms = {this.state.allOpenRooms} />
+        <VenuesRoomsList allOpenRooms = {this.state.allOpenRooms}/>
       </div>
     )
   }

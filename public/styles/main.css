@@ -12,6 +12,9 @@ body {
   background-color: #FAFBFC;
   font-family: 'Merriweather', serif;
 }
+.lightGrey {
+  color: rgba(178, 178, 179, 0.86);
+}
 
 .lightBlue {
   color: rgba(17, 189, 255, 1);
@@ -265,5 +268,10 @@ a {
 h2, h1, h4 {
   margin-top: 0px;
   color: seaGreen;
-  padding-top: 20px
+  padding-top: 20px;
+}
+
+.active {
+  font-weight: bold;
+  padding: 20px;
 }

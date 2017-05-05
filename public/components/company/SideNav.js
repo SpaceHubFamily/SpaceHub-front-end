@@ -41,6 +41,10 @@ export default class DrawerSimpleExample extends Component {
             <Divider />
             <NavLink activeClassName="active" to='/company/my-venues'><MenuItem>My venues/rooms</MenuItem></NavLink>
             <Divider />
+            <NavLink activeClassName="active" to='/user'><MenuItem>User view</MenuItem></NavLink>
+            <Divider />
+            <NavLink exact activeClassName="active" to='/'><MenuItem>Sign out</MenuItem></NavLink>
+            <Divider />
          </div>
       </div>
     </Drawer>

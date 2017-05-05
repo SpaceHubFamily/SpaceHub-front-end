@@ -4,6 +4,7 @@ import FlatButton from 'material-ui/FlatButton';
 import ToggleStar from 'material-ui/svg-icons//toggle/star';
 import ShindigRequest from './ShindigRequest.js';
 import RaisedButton from 'material-ui/RaisedButton';
+import Moment from 'react-moment';
 
 
 const style = {
@@ -13,6 +14,7 @@ const style = {
 };
 
 const ShindigListItem = ({ shindig }) => {
+  console.log(shindig);
   return (
     <Card key={shindig} style={style.card}>
         <CardHeader
@@ -25,14 +27,13 @@ const ShindigListItem = ({ shindig }) => {
         </CardMedia>
         {/* <CardTitle title={shindig.venue_city} /> */}
         <CardText className="card-text">
-          <h1 className="shindig-time">{shindig.start_time} - {shindig.end_time}</h1>
-          <h2 className="shindig-date">{shindig.shindig_date}</h2>
+          <h2 className="shindig-time"><Moment format="HH:mm">{shindig.start_time}</Moment> - <Moment format="HH:mm">{shindig.end_time}</Moment></h2>
+          <h2 className="shindig-date"><Moment format="D MMM YYYY">{shindig.shindig_date}</Moment></h2>
           <h4 className="shindig-location">{shindig.venue_city}, {shindig.venue_state}</h4>
         </CardText>
         <CardActions>
           <div className="req-contain">
             <ShindigRequest />
-
           </div>
         </CardActions>
     </Card>

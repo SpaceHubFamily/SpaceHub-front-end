@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import EventSetter from './eventSetter'
 
 const style = {
   card: {
@@ -23,6 +24,7 @@ const VenuesRoomsListItem = ({ venuesRoom }) => {
           <h3>Status: available</h3>
           <p>Room: {venuesRoom.room_name}</p>
           <p>Rate: {venuesRoom.day_rate}</p>
+          <EventSetter roomID={venuesRoom.room_id}/>
         </CardText>
           <CardMedia overlay={<CardTitle title={`Venue: ${venuesRoom.venue_name}`} />}>
               <img src={venuesRoom.room_img_url} className="roomImg"/>

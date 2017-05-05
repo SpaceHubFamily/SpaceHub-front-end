@@ -2,6 +2,7 @@
 var React = require('react');
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
+import { Link } from 'react-router-dom'
 import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
 import FontIcon from 'material-ui/FontIcon';
@@ -110,7 +111,7 @@ export var newRoomForm = React.createClass({
             // errorText="This field is required"
             label="Available"
           /><br/> */}
-          <FlatButton
+          <Link to='/company'><FlatButton
             style={style.button}
             onTouchTap={this.handleSubmit}
             labelPosition="before"
@@ -118,6 +119,7 @@ export var newRoomForm = React.createClass({
             icon={<Room />}
             fullWidth={true}
             label="Create Room" />
+          </Link>
         </Paper>
       </div>
     )

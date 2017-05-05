@@ -1,4 +1,5 @@
 var React = require('react');
+import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom'
 import TextField from 'material-ui/TextField';
 import FlatButton from 'material-ui/FlatButton';
@@ -55,11 +56,17 @@ export var newVenueForm = React.createClass({
     dispatch(actions.addNewVenue(newVenue));
 
     axios.post('https://spacehubapi.herokuapp.com/venue', newVenue)
-    .then(res => console.log(res, 'good'))
+    .then(res => {
+      console.log(res, 'good')
+      // this.setState({redirect: true});
+    })
     .catch(err => console.log(err, 'bad'))
-
   },
   render: function ( touched ) {
+
+    // if (this.state.redirect) {
+    //   return <Redirect push to="/sample" />;
+    // }
     return (
       <div>
         <div style={style.title}>
